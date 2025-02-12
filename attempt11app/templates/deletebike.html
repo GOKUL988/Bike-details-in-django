@@ -1,0 +1,9 @@
+{%extends 'base.html' %}
+{%block content %}
+<form method="POST">
+    {% csrf_token%}
+    Do You want to Delete this item?
+    <input type="submit" value="yes">
+    <a href="http://127.0.0.1:8000/delete">Cancel</a>
+</form>
+{% endblock %}

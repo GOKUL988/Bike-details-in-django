@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block content %}
+<style>
+    th{
+    padding:20px;
+    algin:center;
+    }
+    td{
+    padding:20px;
+    algin:center;
+    }
+</style>
+<table>
+    <tr>
+        <th>bikename</th>
+        <th>bikeserial</th>
+        <th>Image</th>
+    </tr>
+    {% for row in bikelist %}
+    <tr>
+        <td>{{row.bikename}}</td>
+        <td>{{row.bikeserial}}</td>
+        <td>
+            <img src="{{ row.image }}" alt="{{ row.bikename }}" width="100" height="100">
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

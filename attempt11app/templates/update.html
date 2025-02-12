@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block content %}
+<table cellpadding="10px">
+    <tr>
+        <th>Id</th>
+        <th>Bikename</th>
+        <th>bikeserialno</th>
+        <th>UPDATE</th>
+    </tr>
+    {% for a in bikelist %}
+    <tr>
+        <td>{{a.id}}</td>
+        <td>{{a.bikename}}</td>
+        <td>{{a.bikeserial}}</td>
+        <td><a href="http://127.0.0.1:8000/updatebike/{{a.id}}">update</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
